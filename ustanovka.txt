@@ -1,0 +1,35 @@
+python3 -m venv env
+
+. env/bin/activate
+pip install django
+djang-admin startproject config .
+python3 manage.py startapp books
+mkdir static
+mkdir media
+mkdir templates
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py createsuperuser
+
+pip install Pillow # install
+
+pip install djangorestframework  # install
+ INATALL_APP = [
+       'rest_framework',
+       'books'
+ ]
+
+ config >>> urls.py >>>
+
+ from django.urls import include
+ path()
+
+books >>> serializers.py
+
+from rest_framework.decorators import api_view
+
+#swagger ni urnatish uchun
+pip install drf-yasg
+
+# ishlamasa
+pip install setuptools
